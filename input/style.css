@@ -75,3 +75,18 @@ width:60px;
 height:60px;
 
 }
+
+#window{
+position:absolute;
+display:none;
+flex-direction:column;
+border:2px solid var(--black) ;
+padding: 20px;
+background-color: var(--white);
+border-radius:20px;
+top:50vh ;
+left:50vw;
+transform: translate(-50%,-50%);
+
+
+}

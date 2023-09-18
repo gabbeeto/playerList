@@ -1,9 +1,18 @@
-export function addPlayerButton(){
+let window = document.querySelector('#window');
 
-alert('adding player')
+export function addPlayerButton() {
+window = document.querySelector('#window');
+
+  console.log(window)
+window.innerHTML = `<button>close</button>
+<p>name:</p>
+<input type="text">
+<button>agregar</button>
+`
+window.style.display = 'flex';
 }
 
 
-export function editPlayerButton(){
-alert('editing player')
+export function editPlayerButton() {
+  alert('editing player')
 }
