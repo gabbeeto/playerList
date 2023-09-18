@@ -23,7 +23,7 @@ export function displayArray() {
     deleteImage.addEventListener('click', deletePlayer);
     deleteImage.src = removeImg;
 
-    playerContainer.addEventListener('click', selectPlayer)
+    nameDiv.addEventListener('click', selectPlayer)
 
 
     mainContainer.appendChild(playerContainer);
