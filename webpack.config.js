@@ -13,7 +13,7 @@ module.exports = {
     assetModuleFileName: '[name][ext]',
   },
   module: {
-    rule: [{ use: /\.css$/i, use: ['style-loader', 'css-loader'] }, { use: /\.(png|svg|ttf|otf|jpeg)$/i, type: 'asset/resource' }]
+    rule: [{ test: /\.css$/i, use: ['style-loader', 'css-loader'] }, { test: /\.(png|svg|ttf|otf|jpeg)$/i, type: 'asset/resource' }]
   }
 
 
