@@ -41,10 +41,14 @@ overflow-y:scroll;
 margin-top:12vh;
 width:80vw;
 height:85vh;
-padding:2vh;
 border-radius:20px;
 background-color:white;
 border:2px solid black;
+}
+
+main>  div{
+display: grid;
+grid-template:1fr / 20% 1fr;
 }
 
 main  div > div:first-of-type{
@@ -52,7 +56,25 @@ display: flex;
 flex-direction:row;
 justify-content:center;
 align-items:center;
+text-align:center;
+border-right:2px solid var(--black);
+border-bottom:2px solid var(--black);
 }
+
+
+main  div > div:last-of-type{
+display:flex ;
+justify-content:flex-start;
+/* justify-content:center; */
+/* justify-content:space-evenly; */
+/* justify-content:space-between; */
+/* justify-content:space-around; */
+/* justify-content:flex-end; */
+align-items:center;
+border-bottom:2px solid var(--black);
+padding-left:10px;
+}
+
 main img{
 width:60px;
 height:60px;

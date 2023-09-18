@@ -1,4 +1,5 @@
 import { deletePlayer } from './delete.js'
+import { selectPlayer } from './select.js'
 import removeImg from './img/removeImg.png'
 import starImg from './img/star.png'
 
@@ -22,6 +23,7 @@ export function displayArray() {
     deleteImage.addEventListener('click', deletePlayer);
     deleteImage.src = removeImg;
 
+    playerContainer.addEventListener('click', selectPlayer)
 
 
     mainContainer.appendChild(playerContainer);
