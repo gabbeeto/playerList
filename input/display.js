@@ -14,6 +14,7 @@ export function displayArray() {
   for (let player of sortedPlayer) {
     let playerContainer = document.createElement(`div`);
     let nameDiv = document.createElement('div');
+    nameDiv.value = player.index;
 
     let playerName = document.createElement('p');
     playerName.innerText = player.name;
