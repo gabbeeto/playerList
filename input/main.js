@@ -2,6 +2,9 @@ import './style.css';
 import { displayArray } from './display.js'
 import {addPlayerButton, editPlayerButton} from './window.js'
 
+
+window.isWindowNotOpen = true;
+
 document.querySelector('header > button').addEventListener('click',addPlayerButton);
 document.querySelector('header > button:last-of-type').addEventListener('click',editPlayerButton);
 
