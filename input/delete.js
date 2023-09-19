@@ -8,8 +8,6 @@ playerScores.splice(selectedPlayer, 1)
 updateTheIndexForArray()
 displayArray()
   }
-
-
 }
 
 export function deletePlayer(event){

@@ -1,3 +1,5 @@
+
+import { updateLocalStorage} from './main.js'
 import { deletePlayer } from './delete.js'
 import { selectPlayer } from './select.js'
 import removeImg from './img/removeImg.png'
@@ -12,6 +14,7 @@ const mainContainer = document.querySelector('main');
 export function displayArray() {
   mainContainer.innerHTML = '';
   sortArray()
+  updateLocalStorage()
   for (let player of sortedPlayer) {
     let playerContainer = document.createElement(`div`);
     let nameDiv = document.createElement('div');

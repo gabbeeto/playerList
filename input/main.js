@@ -27,4 +27,7 @@ else {
 
 displayArray()
 
+export function updateLocalStorage(){
+localStorage.setItem('playerScores', JSON.stringify(playerScores))  
+}
 
