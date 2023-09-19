@@ -18,7 +18,7 @@ if (localStorage.playerScores) {
   window.playerScores = JSON.parse(localStorage.playerScores)
 }
 else {
-  window.playerScores = [new Player('gabbeeto', 1),new Player('memo', 2,1),new Player('jay', 5,2)]
+  window.playerScores = [new Player('gabbeeto', 1),new Player('memo', 2,1),new Player('jay', 5,2),new Player('1234', 6,3)]
 }
 
 
