@@ -55,7 +55,8 @@ export function editPlayerButton() {
 
 
 function applyChanges() {
-  alert('apply changes button works fine')
+  playerScores[selectedPlayer].name = document.getElementById('name').value;
+  playerScores[selectedPlayer].score = document.getElementById('stars').value;
   displayArray()
   closeWindow()
 
