@@ -1,4 +1,9 @@
+import {displayArray} from './display.js';
+import {Player} from './main.js';
+
+
 let window = document.querySelector('#window');
+
 
 export function addPlayerButton() {
   window = document.querySelector('#window');
@@ -18,9 +23,12 @@ export function addPlayerButton() {
 
 
 function addToTheScoresPlayerArray() {
-  alert('add button works!!!');
+let nameText = document.querySelector(`#window input[type='text']`);
+  console.log(playerScores)
+playerScores.push(new Player(nameText.value,1,playerScores.length))
 
-
+displayArray()
+closeWindow()
 }
 
 
@@ -45,7 +53,8 @@ export function editPlayerButton() {
 
 function applyChanges() {
   alert('apply changes button works fine')
-
+displayArray()
+closeWindow()
 
 }
 

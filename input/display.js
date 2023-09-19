@@ -10,6 +10,7 @@ window.sortedPlayer = window.playerScores;
 const mainContainer = document.querySelector('main');
 
 export function displayArray() {
+  mainContainer.innerHTML = '';
   sortArray()
   for (let player of sortedPlayer) {
     let playerContainer = document.createElement(`div`);

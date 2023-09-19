@@ -5,7 +5,7 @@ import {addPlayerButton, editPlayerButton} from './window.js'
 document.querySelector('header > button').addEventListener('click',addPlayerButton);
 document.querySelector('header > button:last-of-type').addEventListener('click',editPlayerButton);
 
-class Player {
+export class Player {
   constructor(name, score, index = 0) {
     this.name = name;
     this.score = score;
