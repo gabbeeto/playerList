@@ -49,7 +49,7 @@ export function displayArray() {
 }
 
 function sortArray() {
-  sortedPlayer = window.playerScores.toSorted((a, b) => { return Number(b.score) - Number(a.score) })
+  window.sortedPlayer = window.playerScores.toSorted((a, b) => { return Number(b.score) - Number(a.score) })
 }
 
 

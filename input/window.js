@@ -15,10 +15,22 @@ export function addPlayerButton() {
     <button id='addButton'>agregar</button>`
 
     document.querySelector('#closeWindow').addEventListener('click', closeWindow)
+    document.addEventListener('keydown', closeWindowKeyboard)
     document.querySelector('#addButton').addEventListener('click', addToTheScoresPlayerArray)
+    document.addEventListener('keydown', addToTheScoresPlayerArrayKeyboard)
+
     window.style.display = 'flex';
 
     document.querySelector(`#window input[type='text']`).select()
+  }
+}
+
+
+
+function addToTheScoresPlayerArrayKeyboard(event) {
+  console.log(event.keyCode)
+  if (event.keyCode == 13) {
+    addToTheScoresPlayerArray()
   }
 }
 
@@ -33,7 +45,7 @@ function addToTheScoresPlayerArray() {
 
 
 export function editPlayerButton() {
-  if (isWindowNotOpen) {
+  if (isWindowNotOpen && typeof selectedPlayer == "number") {
 
     isWindowNotOpen = false;
     window.innerHTML = `<button id='closeWindow' >cerrar</button>
@@ -44,12 +56,22 @@ export function editPlayerButton() {
     <button id='applyButton'>aplicar cambios</button>`
 
     document.querySelector('#closeWindow').addEventListener('click', closeWindow)
+    document.addEventListener('keydown', closeWindowKeyboard)
     document.querySelector('#applyButton').addEventListener('click', applyChanges)
+    document.addEventListener('keydown', applyChangesKeyboard)
 
     window.style.display = 'flex';
     document.querySelector(`#window input[type='number']`).select()
 
 
+  }
+}
+
+
+function applyChangesKeyboard(event) {
+  console.log(event.keyCode)
+  if (event.keyCode == 13) {
+    applyChanges()
   }
 }
 
@@ -65,8 +87,17 @@ function applyChanges() {
 
 
 
+function closeWindowKeyboard(event) {
+  console.log(event.keyCode)
+  if (event.keyCode == 27) {
+    closeWindow()
+  }
+}
 
 function closeWindow() {
   window.style.display = 'none';
   isWindowNotOpen = true;
+  document.removeEventListener('keydown', closeWindowKeyboard)
+  document.removeEventListener('keydown', applyChangesKeyboard)
+  document.removeEventListener('keydown', addToTheScoresPlayerArrayKeyboard)
 }
