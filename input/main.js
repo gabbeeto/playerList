@@ -1,6 +1,7 @@
 import './style.css';
 import { displayArray } from './display.js'
 import {addPlayerButton, editPlayerButton} from './window.js'
+import './darkmode.js'
 
 
 window.isWindowNotOpen = true;

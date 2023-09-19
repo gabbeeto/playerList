@@ -10,6 +10,13 @@ box-sizing:border-box;
 --black:black;
 }
 
+:root.dark{
+
+--white:black;
+--black:white;
+
+}
+
 body{
 background-color: var(--orange);
 color:var(--black);
@@ -32,7 +39,9 @@ background-color:var(--white);
 padding: 10px;
 border:2px solid var(--black);
 border-radius:10px;
+transition: background-color,color 0.5s ;
 }
+
 
 button:hover{
 background-color:var(--black);
