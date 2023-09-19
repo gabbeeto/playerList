@@ -6,15 +6,19 @@ box-sizing:border-box;
 
 :root{
 --orange:#FF8D15;
+--orange:#FF8D15;
 --white:white;
 --black:black;
+--green:#C1F7C1;
+--lightOrange:#FFE5A7;
 }
 
 :root.dark{
-
+--orange:#512C05;
 --white:black;
 --black:white;
-
+--green:#161D16;
+--lightOrange:#3B3527;
 }
 
 body{
@@ -36,6 +40,7 @@ gap:5px;
 
 button {
 background-color:var(--white);
+color: var(--black);
 padding: 10px;
 border:2px solid var(--black);
 border-radius:10px;
@@ -56,8 +61,8 @@ margin-top:8vh;
 width:90vw;
 height:90vh;
 border-radius:20px;
-background-color:white;
-border:2px solid black;
+background-color:var(--white);
+border:2px solid var(--black);
 }
 
 main>  div{
@@ -108,9 +113,10 @@ input{
 border-radius:10px;
 padding:10px ;
 border:2px solid var(--black) ;
+color:var(--black);
 }
 input:focus{
-background-color:#C1F7C1;
+background-color:var(--green);
 outline:0px solid transparent;
 }
 

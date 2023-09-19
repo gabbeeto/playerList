@@ -51,7 +51,7 @@ export function selectPlayer(event) {
 function addBackgroundToSelectedPlayer() {
   for (let div of document.querySelectorAll('main > div > div:first-of-type')) {
     if (window.selectedPlayer == div.value) {
-      div.style.backgroundColor = '#FFE5A7'
+      div.style.backgroundColor = 'var(--lightOrange)'
     }
     else {
       div.style.backgroundColor = ''

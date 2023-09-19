@@ -7,7 +7,7 @@ import './darkmode.js'
 window.isWindowNotOpen = true;
 
 document.querySelector('header > button').addEventListener('click',addPlayerButton);
-document.querySelector('header > button:last-of-type').addEventListener('click',editPlayerButton);
+document.querySelector('header > button:nth-of-type(2)').addEventListener('click',editPlayerButton);
 
 export class Player {
   constructor(name, score, index = 0) {
@@ -22,7 +22,7 @@ if (localStorage.playerScores) {
   window.playerScores = JSON.parse(localStorage.playerScores)
 }
 else {
-  window.playerScores = [new Player('gabbeeto', 1),new Player('memo', 2,1),new Player('jay', 5,2),new Player('1234', 6,3)]
+  window.playerScores = [new Player('gabbeeto', 1),new Player('memo', 2,1),new Player('jay', 5,2)]
 }
 
 
