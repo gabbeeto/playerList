@@ -47,10 +47,25 @@ border-radius:10px;
 transition: background-color,color 0.5s ;
 }
 
+input[type='file']::file-selector-button{
+
+background-color:var(--white);
+color: var(--black);
+border:2px solid var(--black);
+padding: 2.5px;
+transition: background-color,color 0.5s ;
+border-radius:10px;
+}
 
 button:nth-of-type(4), input[type='file']{
 opacity:0;
 transition:opacity 1s;
+}
+
+input[type='file']{
+background-color:var(--white);
+color: var(--black);
+border: 2px solid var(--black);
 }
 
 button:hover:nth-of-type(4),input:hover[type='file']{
@@ -58,7 +73,14 @@ opacity:1;
 }
 
 
-button:hover{
+input:hover[type='file']{
+background-color:var(--black);
+color: var(--white);
+border: 2px solid var(--white);
+}
+
+
+button:hover,input[type='file']::file-selector-button{
 background-color:var(--black);
 border:2px solid var(--white);
 color: var(--white);

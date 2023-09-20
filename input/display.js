@@ -1,4 +1,3 @@
-
 import { updateLocalStorage} from './main.js'
 import { deletePlayer } from './delete.js'
 import { selectPlayer } from './select.js'
