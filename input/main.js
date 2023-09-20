@@ -2,6 +2,7 @@ import './style.css';
 import { displayArray } from './display.js'
 import { addPlayerButton, editPlayerButton } from './window.js'
 import './darkmode.js'
+import './downloadAndUpload.js'
 
 let newArray;
 let indexo;

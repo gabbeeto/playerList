@@ -1,6 +1,6 @@
 let isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches;
 
-let darkModeButton = document.querySelector('header > button:last-of-type');
+let darkModeButton = document.querySelector('header > button:nth-of-type(3)');
 darkModeButton.addEventListener('click',activateDarkMode)
 
 
