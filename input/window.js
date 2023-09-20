@@ -3,6 +3,22 @@ import { Player, pushToActivityArray } from './main.js';
 
 let window = document.querySelector('#window');
 
+document.addEventListener('keydown',openWindows)
+
+
+
+function openWindows(event){
+  switch(event.keyCode){
+    case 219:
+     addPlayerButton();
+    break;
+    case 221:
+     editPlayerButton();
+
+  }
+
+
+}
 
 export function addPlayerButton() {
   if (isWindowNotOpen) {
