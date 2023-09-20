@@ -1,5 +1,5 @@
 import { displayArray } from './display.js';
-import { Player } from './main.js';
+import { Player, pushToActivityArray } from './main.js';
 
 let window = document.querySelector('#window');
 
@@ -39,6 +39,7 @@ function addToTheScoresPlayerArray() {
   let nameText = document.querySelector(`#window input[type='text']`);
   console.log(playerScores)
   playerScores.push(new Player(nameText.value, 1, playerScores.length))
+  pushToActivityArray()
   displayArray()
   closeWindow()
 }
@@ -79,6 +80,8 @@ function applyChangesKeyboard(event) {
 function applyChanges() {
   playerScores[selectedPlayer].name = document.getElementById('name').value;
   playerScores[selectedPlayer].score = document.getElementById('stars').value;
+
+  pushToActivityArray()
   displayArray()
   closeWindow()
 
