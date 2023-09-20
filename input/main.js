@@ -95,7 +95,16 @@ function moveBackwardsAndForWardsWithActivityArray(event) {
         indexo = indexo -1
         let stringo = JSON.stringify(activityArray[indexo])
         playerScores = JSON.parse(stringo);
-        console.log(indexo)
+        displayArray()
+      };
+    break;
+    case 88:
+      if (indexo != activityArray.length -1 ) {
+
+        console.log(event)
+        indexo = indexo +1
+        let stringo = JSON.stringify(activityArray[indexo])
+        playerScores = JSON.parse(stringo);
         displayArray()
       }
 
