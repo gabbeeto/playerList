@@ -1,4 +1,4 @@
-import { updateLocalStorage} from './main.js'
+import { updateLocalStorage } from './main.js'
 import { deletePlayer } from './delete.js'
 import { selectPlayer } from './select.js'
 import removeImg from './img/removeImg.png'
@@ -32,19 +32,31 @@ export function displayArray() {
 
     mainContainer.appendChild(playerContainer);
     playerContainer.appendChild(nameDiv);
-    nameDiv.appendChild(playerName);
-    nameDiv.appendChild(deleteImage);
+    nameDiv.append(playerName, deleteImage);
 
 
     let starDiv = document.createElement('div');
     playerContainer.appendChild(starDiv)
-    for(let index = 0; index < player.score; index++){
+
+    let sizeOfScores = (player.score * 60) + 10
+
+    if (sizeOfScores > starDiv.clientWidth) {
+      starDiv.innerHTML = ''
       let star = document.createElement('img');
       star.src = starImg;
-      starDiv.appendChild(star);
+      let scoreText = document.createElement('p');
+      scoreText.innerText = player.score;
+      starDiv.append(star, scoreText);
+    }
+    else{
+      for (let index = 0; index < player.score; index++) {
+        let star = document.createElement('img');
+        star.src = starImg;
+        starDiv.appendChild(star);
+      }
+
 
     }
-
 
 
   }
