@@ -94,6 +94,14 @@ function applyChangesKeyboard(event) {
 
 
 function applyChanges() {
+  let msg = document.querySelector('#message')
+  if(playerScores[selectedPlayer].name != document.getElementById('name').value ){
+  msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
+  }
+  else if(playerScores[selectedPlayer].score != document.getElementById('stars').value){
+  msg.innerText = `${playerScores[selectedPlayer].name} ahora tiene ${document.getElementById('stars').value} estrellas`
+  }
+
   playerScores[selectedPlayer].name = document.getElementById('name').value;
   playerScores[selectedPlayer].score = document.getElementById('stars').value;
 
