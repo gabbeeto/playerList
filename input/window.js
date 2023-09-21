@@ -3,17 +3,17 @@ import { Player, pushToActivityArray } from './main.js';
 
 let window = document.querySelector('#window');
 
-document.addEventListener('keydown',openWindows)
+document.addEventListener('keydown', openWindows)
 
 
 
-function openWindows(event){
-  switch(event.keyCode){
+function openWindows(event) {
+  switch (event.keyCode) {
     case 219:
-     addPlayerButton();
-    break;
+      addPlayerButton();
+      break;
     case 221:
-     editPlayerButton();
+      editPlayerButton();
 
   }
 
@@ -55,14 +55,25 @@ function addToTheScoresPlayerArrayKeyboard(event) {
 }
 
 
-function displayAndHide(el){
-  el.style.opacity = '1';
-setTimeout(()=> {el.style.opacity = '0';},2000)
+export function displayAndHide(el) {
+  setTimeout(display, 500)
+
+  function display() {
+    el.style.opacity = '1';
+    setTimeout(hide, 3000)
+  }
+
+  function hide() {
+    el.style.opacity = '0';
+  }
+
 }
+
+
 function addToTheScoresPlayerArray() {
   let msg = document.querySelector('#message')
 
-  setTimeout(displayAndHide(msg),1000)
+  displayAndHide(msg);
 
   let nameText = document.querySelector(`#window input[type='text']`);
 
@@ -110,15 +121,15 @@ function applyChangesKeyboard(event) {
 
 function applyChanges() {
   let msg = document.querySelector('#message')
-  if(playerScores[selectedPlayer].score != document.getElementById('stars').value){
+  if (playerScores[selectedPlayer].score != document.getElementById('stars').value) {
 
-  setTimeout(displayAndHide(msg),1000)
-  msg.innerText = `${playerScores[selectedPlayer].name} ahora tiene ${document.getElementById('stars').value} estrellas`
+    displayAndHide(msg);
+    msg.innerText = `${playerScores[selectedPlayer].name} ahora tiene ${document.getElementById('stars').value} estrellas`
   }
 
-  else if(playerScores[selectedPlayer].name != document.getElementById('name').value ){
-  msg.style.opacity = '1';
-  msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
+  else if (playerScores[selectedPlayer].name != document.getElementById('name').value) {
+    msg.style.opacity = '1';
+    msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
   }
 
   playerScores[selectedPlayer].name = document.getElementById('name').value;

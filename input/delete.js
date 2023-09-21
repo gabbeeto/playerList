@@ -1,5 +1,6 @@
 import { displayArray } from './display.js'
 import { pushToActivityArray } from './main.js'
+import { displayAndHide} from './window.js'
 
 document.addEventListener('keydown', deleteSelected)
 
@@ -12,6 +13,11 @@ function deleteSelected(event) {
 }
 
 export function deletePlayer(event) {
+
+  console.log(playerScores[event.target.value].name)
+  let msg = document.querySelector('#message')
+  msg.innerText = `${playerScores[event.target.value].name} fue eliminado`
+  displayAndHide(msg)
   playerScores.splice(event.target.value, 1)
   updateTheIndexForArray()
 
