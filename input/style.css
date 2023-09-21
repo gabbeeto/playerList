@@ -1,8 +1,10 @@
+
 *{
 background: 0;
 padding: 0;
 box-sizing:border-box;
 }
+
 
 :root{
 --orange:#FF8D15;
@@ -21,6 +23,24 @@ box-sizing:border-box;
 --lightOrange:#3B3527;
 }
 
+
+@font-face{
+font-family: 'default';
+src: url('./font/Robot\ Crush.otf');
+}
+
+
+@font-face{
+font-family: 'button';
+src: url('./font/Minecrafter.Alt.ttf');
+}
+
+
+@font-face{
+font-family: 'popUp';
+src: url('./font/American\ Captain.otf');
+}
+
 body{
 background-color: var(--orange);
 color:var(--black);
@@ -28,6 +48,7 @@ display: flex;
 justify-content:center;
 align-items:center;
 position: relative;
+font-family: 'default';
 }
 
 header{
@@ -39,6 +60,9 @@ gap:5px;
 }
 
 #message{
+font-family: 'popUp';
+text-transform:uppercase;
+font-size: 2rem;
 position:absolute;
 right: 0;
 top: 0;
@@ -53,10 +77,13 @@ padding: 10px;
 border:2px solid var(--black);
 border-radius:10px;
 transition: background-color,color 0.5s ;
+font-family: 'button';
+
 }
 
 input[type='file']::file-selector-button{
 
+font-family: 'button';
 background-color:var(--white);
 color: var(--black);
 border:2px solid var(--black);
@@ -74,6 +101,7 @@ input[type='file']{
 background-color:var(--white);
 color: var(--black);
 border: 2px solid var(--black);
+font-family: 'default';
 }
 
 button:hover:nth-of-type(4),input:hover[type='file']{
@@ -108,7 +136,7 @@ border:2px solid var(--black);
 
 main>  div{
 display: grid;
-grid-template:1fr / 20% 1fr;
+grid-template:1fr / 25% 1fr;
 }
 
 main  div > div:first-of-type{
@@ -156,7 +184,7 @@ padding:10px ;
 border:2px solid var(--black) ;
 color:var(--black);
 }
-input:focus{
+input:focus:not(input[type='file']){
 background-color:var(--green);
 outline:0px solid transparent;
 }
