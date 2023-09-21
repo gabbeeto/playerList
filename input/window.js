@@ -22,6 +22,10 @@ function openWindows(event){
 
 export function addPlayerButton() {
   if (isWindowNotOpen) {
+
+
+
+
     isWindowNotOpen = false;
     window = document.querySelector('#window');
 
@@ -51,12 +55,23 @@ function addToTheScoresPlayerArrayKeyboard(event) {
 }
 
 
+function displayAndHide(el){
+  el.style.opacity = '1';
+setTimeout(()=> {el.style.opacity = '0';},2000)
+}
 function addToTheScoresPlayerArray() {
+  let msg = document.querySelector('#message')
+
+  setTimeout(displayAndHide(msg),1000)
+
   let nameText = document.querySelector(`#window input[type='text']`);
+
+  msg.innerText = `${nameText.value} ha sido agregado`
   console.log(playerScores)
   playerScores.push(new Player(nameText.value, 1, playerScores.length))
   pushToActivityArray()
   displayArray()
+
   closeWindow()
 }
 
@@ -95,11 +110,15 @@ function applyChangesKeyboard(event) {
 
 function applyChanges() {
   let msg = document.querySelector('#message')
-  if(playerScores[selectedPlayer].name != document.getElementById('name').value ){
-  msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
-  }
-  else if(playerScores[selectedPlayer].score != document.getElementById('stars').value){
+  if(playerScores[selectedPlayer].score != document.getElementById('stars').value){
+
+  setTimeout(displayAndHide(msg),1000)
   msg.innerText = `${playerScores[selectedPlayer].name} ahora tiene ${document.getElementById('stars').value} estrellas`
+  }
+
+  else if(playerScores[selectedPlayer].name != document.getElementById('name').value ){
+  msg.style.opacity = '1';
+  msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
   }
 
   playerScores[selectedPlayer].name = document.getElementById('name').value;
@@ -107,6 +126,7 @@ function applyChanges() {
 
   pushToActivityArray()
   displayArray()
+
   closeWindow()
 
 }

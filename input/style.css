@@ -38,6 +38,14 @@ top: 0;
 gap:5px;
 }
 
+#message{
+position:absolute;
+right: 0;
+top: 0;
+transition: opacity 6s;
+
+}
+
 button {
 background-color:var(--white);
 color: var(--black);
