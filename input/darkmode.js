@@ -11,7 +11,7 @@ if (isDarkMode) {
 }
 
 
-function activateDarkMode() {
+export function activateDarkMode() {
   let html = document.querySelector('html')
   html.classList.toggle('dark')
   if (html.className == 'dark') {

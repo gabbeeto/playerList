@@ -3,7 +3,7 @@ let mainContainer = document.querySelector('main');
 
 scrollButton.addEventListener('click', addScroll);
 
-function addScroll(){
+export function addScroll(){
 mainContainer.classList.toggle('scroll')
 }
 

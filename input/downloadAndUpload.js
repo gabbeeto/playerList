@@ -8,7 +8,7 @@ const uploadButton = document.querySelector(`header > input[type='file']`);
 downloadButton.addEventListener('click', downloadFile)
 uploadButton.addEventListener('change', uploadFile)
 
-function downloadFile() {
+export function downloadFile() {
 
   let blob = new Blob([JSON.stringify(playerScores)], { type: "text/json;charset=utf-8" });
   FileSaver.saveAs(blob, "playerList.json");
@@ -17,7 +17,7 @@ function downloadFile() {
 }
 
 
-function uploadFile() {
+export function uploadFile() {
   let fileReader = new FileReader();
   let uploadedFile = document.querySelector(`input[type='file']`).files[0]
 

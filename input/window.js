@@ -29,10 +29,16 @@ export function addPlayerButton() {
     isWindowNotOpen = false;
     window = document.querySelector('#window');
 
-    window.innerHTML = `<button id='closeWindow'>cerrar</button>
+    if(lang == 'es'){
+    window.innerHTML =`<button id='closeWindow'>cerrar</button>
     <p>nombre:</p>
     <input type="text" id='name'>
-    <button id='addButton'>agregar</button>`
+    <button id='addButton'>agregar</button>`}
+    else{
+    window.innerHTML =`<button id='closeWindow'>close</button>
+    <p>name:</p>
+    <input type="text" id='name'>
+    <button id='addButton'>add</button>`}
 
     document.querySelector('#closeWindow').addEventListener('click', closeWindow)
     document.addEventListener('keydown', closeWindowKeyboard)
@@ -77,7 +83,12 @@ function addToTheScoresPlayerArray() {
 
   let nameText = document.querySelector(`#window input[type='text']`);
 
-  msg.innerText = `${nameText.value} ha sido agregado`
+  if(lang == 'es'){
+  msg.innerText = `${nameText.value} ha sido agregado`;
+  }
+  else{
+  msg.innerText = `${nameText.value} has been added`;
+  }
   console.log(playerScores)
   playerScores.push(new Player(nameText.value, 1, playerScores.length))
   pushToActivityArray()
@@ -91,12 +102,24 @@ export function editPlayerButton() {
   if (isWindowNotOpen && typeof selectedPlayer == "number") {
 
     isWindowNotOpen = false;
+    if(lang == 'es'){
     window.innerHTML = `<button id='closeWindow' >cerrar</button>
     <p>nombre:</p>
     <input value='${playerScores[selectedPlayer].name}' type="text" id='name' autofocus='true' >
     <p>estrellas:</p>
     <input type="number" value='${playerScores[selectedPlayer].score}'  id="stars">
     <button id='applyButton'>aplicar cambios</button>`
+    }
+    else{
+    window.innerHTML = `<button id='closeWindow' >close</button>
+    <p>name:</p>
+    <input value='${playerScores[selectedPlayer].name}' type="text" id='name' autofocus='true' >
+    <p>stars:</p>
+    <input type="number" value='${playerScores[selectedPlayer].score}'  id="stars">
+    <button id='applyButton'>apply changes</button>`
+
+
+    }
 
     document.querySelector('#closeWindow').addEventListener('click', closeWindow)
     document.addEventListener('keydown', closeWindowKeyboard)
@@ -124,12 +147,26 @@ function applyChanges() {
   if (playerScores[selectedPlayer].score != document.getElementById('stars').value) {
 
     displayAndHide(msg);
+    if(lang == 'es'){
     msg.innerText = `${playerScores[selectedPlayer].name} ahora tiene ${document.getElementById('stars').value} estrellas`
+    }
+    else{
+    msg.innerText = `${playerScores[selectedPlayer].name} has ${document.getElementById('stars').value} stars right now!`
+    }
   }
 
   else if (playerScores[selectedPlayer].name != document.getElementById('name').value) {
     msg.style.opacity = '1';
+
+
+
+    if(lang == 'es'){
     msg.innerText = `${playerScores[selectedPlayer].name} ahora se llama ${document.getElementById('name').value}`
+    }
+    else{
+    msg.innerText = `${playerScores[selectedPlayer].name} changed its name to ${document.getElementById('name').value}`
+    }
+
   }
 
   playerScores[selectedPlayer].name = document.getElementById('name').value;

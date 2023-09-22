@@ -4,8 +4,7 @@ import { addPlayerButton, editPlayerButton } from './window.js';
 import './darkmode.js';
 import './downloadAndUpload.js';
 import './scroll.js';
-import './img/english.jpeg';
-import './img/spanish.jpeg';
+import './eng.js';
 
 let newArray;
 let indexo;
