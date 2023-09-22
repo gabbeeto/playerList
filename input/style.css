@@ -71,7 +71,6 @@ position:absolute;
 right: 0;
 top: 0;
 transition: opacity 6s;
-
 }
 
 button {
@@ -96,7 +95,7 @@ transition: background-color,color 0.5s ;
 border-radius:10px;
 }
 
-button:nth-of-type(4), input[type='file']{
+button:nth-of-type(4),button:nth-of-type(5), input[type='file']{
 opacity:0;
 transition:opacity 1s;
 }
@@ -108,7 +107,7 @@ border: 2px solid var(--black);
 font-family: 'default';
 }
 
-button:hover:nth-of-type(4),input:hover[type='file']{
+button:hover:nth-of-type(4),button:hover:nth-of-type(5), input:hover[type='file']{
 opacity:1;
 }
 
@@ -129,14 +128,18 @@ cursor: pointer;
 
 
 main{
-overflow-y:auto;
 margin-top:8vh;
 width:90vw;
-height:90vh;
 border-radius:20px;
 background-color:var(--white);
 border:2px solid var(--black);
 }
+
+main.scroll{
+overflow-y:auto;
+height:90vh;
+}
+
 
 main>  div{
 display: grid;
@@ -150,20 +153,18 @@ justify-content:center;
 align-items:center;
 text-align:center;
 border-right:2px solid var(--black);
-border-bottom:2px solid var(--black);
 }
 
-/* main  div > div:last-of-type:not(main div:last-of-type >div:last-of-type), */
-/* main  div > div:first-of-type:not(main  div:last-of-type > div:first-of-type){ */
-/* border-bottom:2px solid var(--black); */
-/* } */
+main  div > div:last-of-type:not(main div:last-of-type >div:last-of-type),
+main  div > div:first-of-type:not(main  div:last-of-type > div:first-of-type){
+border-bottom:2px solid var(--black);
+}
 
 
 main  div > div:last-of-type{
 display:flex ;
 justify-content:flex-start;
 align-items:center;
-border-bottom:2px solid var(--black);
 padding-left:10px;
 }
 
