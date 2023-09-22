@@ -3,8 +3,7 @@ const html = require('html-webpack-plugin')
 
 module.exports = {
   entry: './input/main.js',
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: 'production',
   plugins: [new html({ template: './input/index.html' })],
   output: {
     filename: '[name]-[contenthash].js',
