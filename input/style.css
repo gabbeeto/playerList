@@ -163,6 +163,11 @@ main  div > div:first-of-type:not(main  div:last-of-type > div:first-of-type){
 border-bottom:2px solid var(--black);
 }
 
+main.scroll div:last-of-type > div:last-of-type,main.scroll  div:last-of-type > div:first-of-type{
+
+border-bottom:2px solid var(--black);
+
+}
 
 main  div > div:last-of-type{
 display:flex ;
