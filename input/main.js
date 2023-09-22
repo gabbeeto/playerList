@@ -3,6 +3,7 @@ import { displayArray } from './display.js'
 import { addPlayerButton, editPlayerButton } from './window.js'
 import './darkmode.js'
 import './downloadAndUpload.js'
+import './scroll.js'
 
 let newArray;
 let indexo;
