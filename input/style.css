@@ -1,4 +1,3 @@
-
 *{
 background: 0;
 padding: 0;
@@ -51,6 +50,11 @@ position: relative;
 font-family: 'default';
 }
 
+
+p{
+font-size:max(0.9rem,2.3vw);
+}
+
 header{
 display:flex;
 position:absolute;
@@ -78,7 +82,6 @@ border:2px solid var(--black);
 border-radius:10px;
 transition: background-color,color 0.5s ;
 font-family: 'button';
-
 }
 
 input[type='file']::file-selector-button{
@@ -136,7 +139,7 @@ border:2px solid var(--black);
 
 main>  div{
 display: grid;
-grid-template:1fr / 25% 1fr;
+grid-template:1fr / 35% 1fr;
 }
 
 main  div > div:first-of-type{
