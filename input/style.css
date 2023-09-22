@@ -41,10 +41,13 @@ src: url('./font/American\ Captain.otf');
 }
 
 body{
+
 background-color: var(--orange);
 color:var(--black);
 display: flex;
 justify-content:center;
+flex-direction:column;
+gap:15px;
 align-items:center;
 position: relative;
 font-family: 'default';
@@ -171,7 +174,6 @@ padding-left:10px;
 main img{
 width:60px;
 height:60px;
-
 }
 
 #window{
@@ -200,3 +202,22 @@ background-color:var(--green);
 outline:0px solid transparent;
 }
 
+article{
+border: 2px solid var(--black);
+display: block;
+background-color: var(--white);
+padding:5px;
+border-radius:10px;
+}
+
+article img{
+
+width:60px;
+height:60px;
+border-radius:10px;
+}
+
+article img:hover{
+cursor: pointer;
+outline:2px solid var(--black);
+}

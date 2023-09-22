@@ -1,9 +1,11 @@
 import './style.css';
-import { displayArray } from './display.js'
-import { addPlayerButton, editPlayerButton } from './window.js'
-import './darkmode.js'
-import './downloadAndUpload.js'
-import './scroll.js'
+import { displayArray } from './display.js';
+import { addPlayerButton, editPlayerButton } from './window.js';
+import './darkmode.js';
+import './downloadAndUpload.js';
+import './scroll.js';
+import './img/english.jpeg';
+import './img/spanish.jpeg';
 
 let newArray;
 let indexo;

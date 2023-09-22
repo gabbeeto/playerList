@@ -94,7 +94,7 @@ export function editPlayerButton() {
     window.innerHTML = `<button id='closeWindow' >cerrar</button>
     <p>nombre:</p>
     <input value='${playerScores[selectedPlayer].name}' type="text" id='name' autofocus='true' >
-    <p>stars:</p>
+    <p>estrellas:</p>
     <input type="number" value='${playerScores[selectedPlayer].score}'  id="stars">
     <button id='applyButton'>aplicar cambios</button>`
 
