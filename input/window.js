@@ -90,7 +90,7 @@ function addToTheScoresPlayerArray() {
   msg.innerText = `${nameText.value} has been added`;
   }
   console.log(playerScores)
-  playerScores.push(new Player(nameText.value, 1, playerScores.length))
+  playerScores.push(new Player(nameText.value, 0, playerScores.length))
   pushToActivityArray()
   displayArray()
 
